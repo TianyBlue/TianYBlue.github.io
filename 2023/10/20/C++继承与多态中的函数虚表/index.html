@@ -33,19 +33,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>TianYBlue's Record</title>
+  <title>C++ 继承 - TianYBlue's Record</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="TianYBlue's Record - TianYBlue - TianYBlue's Record">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="TianYBlue&#39;s Record">
+<meta property="og:title" content="C++ 继承">
 <meta property="og:url" content="http://example.com/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/index.html">
 <meta property="og:site_name" content="TianYBlue&#39;s Record">
-<meta property="og:description" content="C++ 继承 参考 链接   子类构造时会自动调用基类的构造函数  1234567891011121314151617class Base&amp;#123;public:    Base(string name);    string name;    void printName();&amp;#125;;class Derived : public Base&amp;#123;public:    Derived(">
+<meta property="og:description" content="参考 链接   子类构造时会自动调用基类的构造函数  1234567891011121314151617class Base&amp;#123;public:    Base(string name);    string name;    void printName();&amp;#125;;class Derived : public Base&amp;#123;public:    Derived(unsign">
 <meta property="og:locale">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-10-20T12:16:45.132Z">
-<meta property="article:modified_time" content="2023-10-18T12:09:16.097Z">
+<meta property="article:modified_time" content="2023-10-20T12:57:21.872Z">
 <meta property="article:author" content="TianYBlue">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1697,9 +1697,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		'}'+
 	'</style>'+
     '<div class="kill-ie">'+
-        `<span class="kill-t"><b>抱歉，您的瀏覽器無法訪問本站</b></span><br/>`+
-        `<span class="kill-c">微軟已經於2016年終止了對 Internet Explorer (IE) 10 及更早版本的支持，<br/>繼續使用存在極大的安全隱患，請使用當代主流的瀏覽器進行訪問。</span><br/>`+
-        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>了解詳情 ></strong></a>`+
+        `<span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>`+
+        `<span class="kill-c">Microsoft has terminated support for Internet Explorer (IE) 10 and earlier versions in 2016. <br/>There are great security risks to continue using it. Please use contemporary mainstream browsers to access.</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>Learn more ></strong></a>`+
     '</div>');
 </script>
 
@@ -1727,9 +1727,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 		}
 	</style>
     <div class="kill-noscript">
-        <span class="kill-t"><b>抱歉，您的瀏覽器無法訪問本站</b></span><br/>
-        <span class="kill-c">本頁面需要瀏覽器支持（啟用）JavaScript</span><br/>
-        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>了解詳情 ></strong></a>
+        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
+        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
     </div>
 </noscript>
 
@@ -1744,7 +1744,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1697806445281),
+    lastupdate: new Date(1697806686727),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2537,16 +2537,55 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
     
-      <span hidden itemprop="name headline">
+      <h1 class="title" itemprop="name headline">
+        C++ 继承
+      </h1>
+      <div class='new-meta-box'>
         
-      </span>
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-10-20T20:16:45+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Oct 20, 2023</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
     
   </div>
 
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="C-继承"><a href="#C-继承" class="headerlink" title="C++ 继承"></a>C++ 继承</h1><blockquote>
+    <blockquote>
 <p>参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_62718027/article/details/125922249">链接</a></p>
 </blockquote>
 <ol>
@@ -2610,10 +2649,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-18T20:09:16+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-20T20:57:21+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Oct 18, 2023</p>
+    <p>更新于：Oct 20, 2023</p>
   </a>
 </div>
 
@@ -2632,7 +2671,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/&title= - TianYBlue's Record&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/&title=C++ 继承 - TianYBlue's Record&summary="
           
           >
           
@@ -2644,7 +2683,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/&title= - TianYBlue's Record&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/&title=C++ 继承 - TianYBlue's Record&summary="
           
           >
           
@@ -2656,7 +2695,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/&title= - TianYBlue's Record&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/&title=C++ 继承 - TianYBlue's Record&summary="
           
           >
           
@@ -2689,18 +2728,26 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/10/20/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%80%A7%E8%83%BD/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Oct 20, 2023</p>
-          <p class='content'>CPU 缓存、Cache Miss与伪共享CPU CacheCPU有L1、L2等多级缓存，相较于CPU的运算速度来说，内存过于缓慢。因此，一些数据会被提前加载进CPU Cache里，以提高运算速...</p>
+        <a class='prev' href='/2023/10/20/qt%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>QT 文件路径相关操作</p>
+          <p class='content'>判断文件&#x2F;文件夹是否存在
+文件
+12QFileInfo info(path);info.isFile();
+
+文件夹
+12QDir dir(path);dir.exists();
+
+不...</p>
         </a>
       
       
         <a class='next' href='/2023/10/20/mongodb%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/'>
-          <p class='title'>Oct 20, 2023<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>MongoDB 配置与 C++ Driver使用MongoDB 配置方法可从网上查找
+          <p class='title'>MongoDB 配置与 C++ Driver使用<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>MongoDB 配置方法可从网上查找
 MongoDB安装
 安装2
-C++ Driver MongoCXXMongoDB 的C++驱动可使用 Mon...</p>
+C++ Driver MongoCXXMongoDB 的C++驱动可使用 MongoCXX
+MongoCXX 编译MongoCX...</p>
         </a>
       
     </div>
@@ -2748,19 +2795,9 @@ C++ Driver MongoCXXMongoDB 的C++驱动可使用 Mon...</p>
   
 
 
-  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
-    
-  <header>
-    
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        
-    </div>
-  </section>
+  <div class="">
+    <!-- pjax占位 -->
+  </div>
 
   
 
@@ -2814,7 +2851,7 @@ C++ Driver MongoCXXMongoDB 的C++驱动可使用 Mon...</p>
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2864,7 +2901,7 @@ C++ Driver MongoCXXMongoDB 的C++驱动可使用 Mon...</p>
       
     
       
-        <div><p>博客內容遵循 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh_TW">姓名標示-非商業性-相同方式分享 4.0 國際 (CC BY-NC-SA 4.0) 協議</a></p>
+        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
@@ -2876,9 +2913,9 @@ C++ Driver MongoCXXMongoDB 的C++驱动可使用 Mon...</p>
       
     
       
-        本站使用
+        Use
         <a href="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0" target="_blank" class="codename">Volantis</a>
-        作為主題
+        as theme
       
     
       
@@ -3328,7 +3365,7 @@ C++ Driver MongoCXXMongoDB 的C++驱动可使用 Mon...</p>
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TianYBlue's Record","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TianYBlue","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TianYBlue's Record"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/10/20/C++继承与多态中的函数虚表/"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TianYBlue's Record","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"TianYBlue","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"TianYBlue's Record","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"","inLanguage":"zh-Hans","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/"},"author":{"@type":"Person","name":"TianYBlue","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TianYBlue's Record","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/","wordCount":0,"datePublished":"2023-10-20T12:16:45.132Z","dateModified":"2023-10-18T12:09:16.097Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TianYBlue's Record","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TianYBlue","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TianYBlue's Record"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/10/20/C++继承与多态中的函数虚表/","name":"C++ 继承"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TianYBlue's Record","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"TianYBlue","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"TianYBlue's Record","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"C++ 继承","description":"","inLanguage":"zh-Hans","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/"},"author":{"@type":"Person","name":"TianYBlue","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TianYBlue's Record","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/","wordCount":0,"datePublished":"2023-10-20T12:16:45.132Z","dateModified":"2023-10-20T12:57:21.872Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
