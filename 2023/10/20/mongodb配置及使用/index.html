@@ -6,11 +6,15 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="MongoDB 配置与 C++ Driver使用MongoDB 配置方法可从网上查找 MongoDB安装 安装2 C++ Driver MongoCXXMongoDB 的C++驱动可使用 MongoCXX MongoCXX 编译MongoCXX 需要自己编译，且依赖于boost库，因此需要提前编译boost  boost的编译方法很简单，只需从boost官网下载最新版压缩包解压，先执行bootst">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2023/10/20/mongodb%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="MongoDB 配置与 C++ Driver使用MongoDB 配置方法可从网上查找 MongoDB安装 安装2 C++ Driver MongoCXXMongoDB 的C++驱动可使用 MongoCXX MongoCXX 编译MongoCXX 需要自己编译，且依赖于boost库，因此需要提前编译boost  boost的编译方法很简单，只需从boost官网下载最新版压缩包解压，先执行bootst">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-10-20T12:16:45.132Z">
+<meta property="article:modified_time" content="2023-10-18T02:24:06.525Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -71,161 +75,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-qt文件路径相关操作" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/10/20/qt%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="article-date">
-  <time class="dt-published" datetime="2023-10-20T12:16:45.147Z" itemprop="datePublished">2023-10-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="QT-文件路径相关操作"><a href="#QT-文件路径相关操作" class="headerlink" title="QT 文件路径相关操作"></a>QT 文件路径相关操作</h1><h2 id="判断文件-文件夹是否存在"><a href="#判断文件-文件夹是否存在" class="headerlink" title="判断文件&#x2F;文件夹是否存在"></a>判断文件&#x2F;文件夹是否存在</h2><ol>
-<li><p>文件</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">QFileInfo <span class="title">info</span><span class="params">(path)</span></span>;</span><br><span class="line">info.<span class="built_in">isFile</span>();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>文件夹</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">QDir <span class="title">dir</span><span class="params">(path)</span></span>;</span><br><span class="line">dir.<span class="built_in">exists</span>();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>不在乎文件还是文件夹</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">QFileInfo <span class="title">info</span><span class="params">(path)</span></span>;</span><br><span class="line">info.<span class="built_in">exists</span>();</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="文件相关信息"><a href="#文件相关信息" class="headerlink" title="文件相关信息"></a>文件相关信息</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">QFileInfo <span class="title">info</span><span class="params">(path)</span></span>;</span><br><span class="line">info.<span class="built_in">fileName</span>();</span><br><span class="line"><span class="comment">// 去掉后缀名</span></span><br><span class="line">info.<span class="built_in">baseName</span>();</span><br><span class="line"><span class="comment">// 所在绝对路径</span></span><br><span class="line">info.<span class="built_in">absolutePath</span>();</span><br></pre></td></tr></table></figure>
-
-<h2 id="创建文件夹"><a href="#创建文件夹" class="headerlink" title="创建文件夹"></a>创建文件夹</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">QDir <span class="title">dir</span><span class="params">(path)</span></span>;</span><br><span class="line">dir.<span class="built_in">mkdir</span>(newPath);</span><br></pre></td></tr></table></figure>
-
-<h2 id="当前路径"><a href="#当前路径" class="headerlink" title="当前路径"></a>当前路径</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// .exe所在的路径</span></span><br><span class="line">QDir::<span class="built_in">currentPath</span>();</span><br></pre></td></tr></table></figure>
-
-<h2 id="打开对话框选择文件"><a href="#打开对话框选择文件" class="headerlink" title="打开对话框选择文件"></a>打开对话框选择文件</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/// @params</span></span><br><span class="line"><span class="comment">// parent, caption, initial path, file types</span></span><br><span class="line">QString path = QFileDialog::<span class="built_in">getOpenFileName</span>(<span class="literal">nullptr</span>, <span class="string">&quot;open a file&quot;</span>, QDir::<span class="built_in">currentPath</span>(), <span class="string">&quot;ObjectFile(*.obj)&quot;</span>);</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/20/qt%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" data-id="clnyksmas000230ur1hf4gmhr" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-多线程的性能" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/10/20/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%80%A7%E8%83%BD/" class="article-date">
-  <time class="dt-published" datetime="2023-10-20T12:16:45.147Z" itemprop="datePublished">2023-10-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="CPU-缓存、Cache-Miss与伪共享"><a href="#CPU-缓存、Cache-Miss与伪共享" class="headerlink" title="CPU 缓存、Cache Miss与伪共享"></a>CPU 缓存、Cache Miss与伪共享</h1><h2 id="CPU-Cache"><a href="#CPU-Cache" class="headerlink" title="CPU Cache"></a>CPU Cache</h2><p>CPU有L1、L2等多级缓存，相较于CPU的运算速度来说，内存过于缓慢。<br>因此，一些数据会被提前加载进CPU Cache里，以提高运算速度。</p>
-<h2 id="Cache-Line"><a href="#Cache-Line" class="headerlink" title="Cache Line"></a>Cache Line</h2><p>缓存加载数据是以某个单元为单位的，称为缓存行(Cache Line)，每个缓存行一般大小为32Bytes、64Bytes等。</p>
-<p>由于所需数据并不一定等于缓存行大小，因此一些(可能被其他线程使用的)数据也会被加载进该线程的缓存中，<br>或是所需数据存在于多个缓存行中。</p>
-<h2 id="Cache-Miss"><a href="#Cache-Miss" class="headerlink" title="Cache Miss"></a>Cache Miss</h2><p>CPU 会优先从Cache中读取数据，若Cache中没有对应数据，则需要从内存中读取，这种现象叫Cache Miss。</p>
-<p>Cache Miss导致从内存中读数据，是一个消耗较大的操作。</p>
-<h2 id="伪共享-False-Sharing"><a href="#伪共享-False-Sharing" class="headerlink" title="伪共享 False Sharing"></a>伪共享 False Sharing</h2><p>由于一个线程的缓存中可能同时存在其他线程使用的数据，当线程A修改自己的数据时，会导致缓存失效。</p>
-<p>其他线程的存在线程A修改的数据的缓存行也会失效，缓存一致性强制其<br>必须重新从内存中获取缓存行。</p>
-<p>这种线程间实际上没有共享数据，但由于缓存共享特定数据的存在导致的问题叫做伪共享。</p>
-<h2 id="性能改进的方法"><a href="#性能改进的方法" class="headerlink" title="性能改进的方法"></a>性能改进的方法</h2><ul>
-<li>同一线程所使用的数据应紧密排列，使Cache中的有效数据尽可能多</li>
-<li>不同线程使用的数据应分隔开，防止伪共享现象</li>
-</ul>
-<h2 id="C-相关信息"><a href="#C-相关信息" class="headerlink" title="C++ 相关信息"></a>C++ 相关信息</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 数据间隔大于此数，则不会出现伪共享现象</span></span><br><span class="line"><span class="comment">// 实际上使不同线程使用的数据不在一个缓存行上</span></span><br><span class="line">std::hardware_destructive_interference_size</span><br><span class="line"><span class="comment">// 数据大小小于此数，则可被加载进同一缓存行中，减少Cache Miss</span></span><br><span class="line">std::hardware_constructive_interference_size</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/20/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%80%A7%E8%83%BD/" data-id="clnyksmas000330ur6ggq9jej" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-C++继承与多态中的函数虚表" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/" class="article-date">
-  <time class="dt-published" datetime="2023-10-20T12:16:45.132Z" itemprop="datePublished">2023-10-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="C-继承"><a href="#C-继承" class="headerlink" title="C++ 继承"></a>C++ 继承</h1><blockquote>
-<p>参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_62718027/article/details/125922249">链接</a></p>
-</blockquote>
-<ol>
-<li>子类构造时会自动调用基类的构造函数</li>
-</ol>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Base</span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Base</span>(string name);</span><br><span class="line">    string name;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">printName</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Derived</span> : <span class="keyword">public</span> Base&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Derived</span>(<span class="type">unsigned</span> <span class="type">int</span> age);</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> age;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">printAge</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Derived d;</span><br><span class="line">...</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>输出：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Base Constructor Called!</span><br><span class="line">Derived Constructor Called!</span><br><span class="line"></span><br><span class="line">~Derived Called!</span><br><span class="line">~Base Called! </span><br></pre></td></tr></table></figure>
-
-
-
-<ol start="2">
-<li>子类和基类有同名变量或函数时，构成隐藏</li>
-</ol>
-<blockquote>
-<p>同名函数不区分参数列表</p>
-<p>默认调用子类同名成员</p>
-<p>基类成员可通过域名解析符号，如Base::name获得</p>
-</blockquote>
-<ol start="3">
-<li>多态的实现依赖于虚函数</li>
-</ol>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/136478734">参考</a></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Base</span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Base print&quot;</span>&lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Derived</span> : <span class="keyword">public</span> Base&#123;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">        cout &lt;&lt; <span class="string">&quot;Derived print&quot;</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Derived* d = <span class="keyword">new</span> <span class="built_in">Derived</span>();</span><br><span class="line">Base* b = d;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>输出：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;Derived print&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 若Base类不使用virtual，则输出为&quot;Base print&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>实现原理</strong><br>基类和派生类中隐含一个虚函数表，存储所有虚函数的地址</p>
-<p><code>Base* b = new Base()</code>中b指向Base()自己的虚函数表</p>
-<p><code>Base* b = new Derived()</code>中b指向Derived()的函数虚表</p>
-<p>反之，若<code>Derived* d = new Base(); d-&gt;print();</code>，则d调用的是Base()的虚函数。若d调用了Derived()类中多出来的函数，则由于d在函数虚表中找不到该函数而程序崩溃。</p>
-<ol start="4">
-<li>虚析构函数</li>
-</ol>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设Base类的析构函数非虚</span></span><br><span class="line">Base* b = <span class="keyword">new</span> <span class="built_in">Derived</span>();</span><br><span class="line"><span class="comment">// 可能发生内存泄漏</span></span><br><span class="line"><span class="keyword">delete</span> b;</span><br></pre></td></tr></table></figure>
-
-<p>由于delete的是Base类的指针，因此程序只会调用Base()的析构函数，处理Base类中定义的资源释放，若Derived类申请了额外的资源，则发生内存泄漏。</p>
-<p>对于这种情况，需要将Base类的析构函数设定为虚函数，delete时才可调用Derived的析构函数。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/" data-id="clnyksman000030urgekm4sem" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-mongodb配置及使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-mongodb配置及使用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/10/20/mongodb%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/" class="article-date">
   <time class="dt-published" datetime="2023-10-20T12:16:45.132Z" itemprop="datePublished">2023-10-20</time>
@@ -320,62 +170,28 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/10/20/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-10-20T11:54:54.550Z" itemprop="datePublished">2023-10-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          (no title)
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/10/20/hello-world/">Hello World</a>
-    </h1>
   
+    <a href="/2023/10/20/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/20/hello-world/" data-id="clnykeqzo00003wurgy8tgm98" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
 
 
 </section>
