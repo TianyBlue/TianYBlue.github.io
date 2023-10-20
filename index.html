@@ -73,46 +73,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-多线程的性能" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/10/20/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%80%A7%E8%83%BD/" class="article-date">
-  <time class="dt-published" datetime="2023-10-20T12:16:45.147Z" itemprop="datePublished">2023-10-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="CPU-缓存、Cache-Miss与伪共享"><a href="#CPU-缓存、Cache-Miss与伪共享" class="headerlink" title="CPU 缓存、Cache Miss与伪共享"></a>CPU 缓存、Cache Miss与伪共享</h1><h2 id="CPU-Cache"><a href="#CPU-Cache" class="headerlink" title="CPU Cache"></a>CPU Cache</h2><p>CPU有L1、L2等多级缓存，相较于CPU的运算速度来说，内存过于缓慢。<br>因此，一些数据会被提前加载进CPU Cache里，以提高运算速度。</p>
-<h2 id="Cache-Line"><a href="#Cache-Line" class="headerlink" title="Cache Line"></a>Cache Line</h2><p>缓存加载数据是以某个单元为单位的，称为缓存行(Cache Line)，每个缓存行一般大小为32Bytes、64Bytes等。</p>
-<p>由于所需数据并不一定等于缓存行大小，因此一些(可能被其他线程使用的)数据也会被加载进该线程的缓存中，<br>或是所需数据存在于多个缓存行中。</p>
-<h2 id="Cache-Miss"><a href="#Cache-Miss" class="headerlink" title="Cache Miss"></a>Cache Miss</h2><p>CPU 会优先从Cache中读取数据，若Cache中没有对应数据，则需要从内存中读取，这种现象叫Cache Miss。</p>
-<p>Cache Miss导致从内存中读数据，是一个消耗较大的操作。</p>
-<h2 id="伪共享-False-Sharing"><a href="#伪共享-False-Sharing" class="headerlink" title="伪共享 False Sharing"></a>伪共享 False Sharing</h2><p>由于一个线程的缓存中可能同时存在其他线程使用的数据，当线程A修改自己的数据时，会导致缓存失效。</p>
-<p>其他线程的存在线程A修改的数据的缓存行也会失效，缓存一致性强制其<br>必须重新从内存中获取缓存行。</p>
-<p>这种线程间实际上没有共享数据，但由于缓存共享特定数据的存在导致的问题叫做伪共享。</p>
-<h2 id="性能改进的方法"><a href="#性能改进的方法" class="headerlink" title="性能改进的方法"></a>性能改进的方法</h2><ul>
-<li>同一线程所使用的数据应紧密排列，使Cache中的有效数据尽可能多</li>
-<li>不同线程使用的数据应分隔开，防止伪共享现象</li>
-</ul>
-<h2 id="C-相关信息"><a href="#C-相关信息" class="headerlink" title="C++ 相关信息"></a>C++ 相关信息</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 数据间隔大于此数，则不会出现伪共享现象</span></span><br><span class="line"><span class="comment">// 实际上使不同线程使用的数据不在一个缓存行上</span></span><br><span class="line">std::hardware_destructive_interference_size</span><br><span class="line"><span class="comment">// 数据大小小于此数，则可被加载进同一缓存行中，减少Cache Miss</span></span><br><span class="line">std::hardware_constructive_interference_size</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/20/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%80%A7%E8%83%BD/" data-id="clnyl3ufe00030kurc5aq7ve1" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-qt文件路径相关操作" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/10/20/qt%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="article-date">
@@ -145,7 +105,47 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/20/qt%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" data-id="clnyl3ufg00040kurfwyo8pyh" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/10/20/qt%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" data-id="clnyl5iyv0003fkuradj0hij7" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-多线程的性能" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/10/20/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%80%A7%E8%83%BD/" class="article-date">
+  <time class="dt-published" datetime="2023-10-20T12:16:45.147Z" itemprop="datePublished">2023-10-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="CPU-缓存、Cache-Miss与伪共享"><a href="#CPU-缓存、Cache-Miss与伪共享" class="headerlink" title="CPU 缓存、Cache Miss与伪共享"></a>CPU 缓存、Cache Miss与伪共享</h1><h2 id="CPU-Cache"><a href="#CPU-Cache" class="headerlink" title="CPU Cache"></a>CPU Cache</h2><p>CPU有L1、L2等多级缓存，相较于CPU的运算速度来说，内存过于缓慢。<br>因此，一些数据会被提前加载进CPU Cache里，以提高运算速度。</p>
+<h2 id="Cache-Line"><a href="#Cache-Line" class="headerlink" title="Cache Line"></a>Cache Line</h2><p>缓存加载数据是以某个单元为单位的，称为缓存行(Cache Line)，每个缓存行一般大小为32Bytes、64Bytes等。</p>
+<p>由于所需数据并不一定等于缓存行大小，因此一些(可能被其他线程使用的)数据也会被加载进该线程的缓存中，<br>或是所需数据存在于多个缓存行中。</p>
+<h2 id="Cache-Miss"><a href="#Cache-Miss" class="headerlink" title="Cache Miss"></a>Cache Miss</h2><p>CPU 会优先从Cache中读取数据，若Cache中没有对应数据，则需要从内存中读取，这种现象叫Cache Miss。</p>
+<p>Cache Miss导致从内存中读数据，是一个消耗较大的操作。</p>
+<h2 id="伪共享-False-Sharing"><a href="#伪共享-False-Sharing" class="headerlink" title="伪共享 False Sharing"></a>伪共享 False Sharing</h2><p>由于一个线程的缓存中可能同时存在其他线程使用的数据，当线程A修改自己的数据时，会导致缓存失效。</p>
+<p>其他线程的存在线程A修改的数据的缓存行也会失效，缓存一致性强制其<br>必须重新从内存中获取缓存行。</p>
+<p>这种线程间实际上没有共享数据，但由于缓存共享特定数据的存在导致的问题叫做伪共享。</p>
+<h2 id="性能改进的方法"><a href="#性能改进的方法" class="headerlink" title="性能改进的方法"></a>性能改进的方法</h2><ul>
+<li>同一线程所使用的数据应紧密排列，使Cache中的有效数据尽可能多</li>
+<li>不同线程使用的数据应分隔开，防止伪共享现象</li>
+</ul>
+<h2 id="C-相关信息"><a href="#C-相关信息" class="headerlink" title="C++ 相关信息"></a>C++ 相关信息</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 数据间隔大于此数，则不会出现伪共享现象</span></span><br><span class="line"><span class="comment">// 实际上使不同线程使用的数据不在一个缓存行上</span></span><br><span class="line">std::hardware_destructive_interference_size</span><br><span class="line"><span class="comment">// 数据大小小于此数，则可被加载进同一缓存行中，减少Cache Miss</span></span><br><span class="line">std::hardware_constructive_interference_size</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/10/20/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%80%A7%E8%83%BD/" data-id="clnyl5iyw0004fkur0fvlaqur" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -213,7 +213,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/" data-id="clnyl3uf700000kur88my31ls" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/" data-id="clnyl5iyp0000fkurfa7x1zr9" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -313,7 +313,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/20/mongodb%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/" data-id="clnyl3ufd00020kur5skb09e7" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/10/20/mongodb%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/" data-id="clnyl5iyt0001fkur9nvvedj0" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -364,7 +364,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/20/hello-world/" data-id="clnyl3ufc00010kurhktv9jzx" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://example.com/2023/10/20/hello-world/" data-id="clnyl5iyu0002fkur5wf620he" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -407,11 +407,11 @@
       <ul>
         
           <li>
-            <a href="/2023/10/20/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%80%A7%E8%83%BD/">(no title)</a>
+            <a href="/2023/10/20/qt%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">(no title)</a>
           </li>
         
           <li>
-            <a href="/2023/10/20/qt%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">(no title)</a>
+            <a href="/2023/10/20/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%80%A7%E8%83%BD/">(no title)</a>
           </li>
         
           <li>
