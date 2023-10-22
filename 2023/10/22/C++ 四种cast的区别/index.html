@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2023/10/20/mongodb配置及使用/"/>
+  <link rel="canonical" href="http://example.com/2023/10/22/c++ 四种cast的区别/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,19 +33,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>MongoDB 配置与 C++ Driver使用 - TianYBlue's Tiny Blog</title>
+  <title>C++ 四种cast的区别 - TianYBlue's Tiny Blog</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="TianYBlue's Tiny Blog - TianYBlue - TianYBlue's Tiny Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="MongoDB 配置与 C++ Driver使用">
-<meta property="og:url" content="http://example.com/2023/10/20/mongodb%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="C++ 四种cast的区别">
+<meta property="og:url" content="http://example.com/2023/10/22/C++%20%E5%9B%9B%E7%A7%8Dcast%E7%9A%84%E5%8C%BA%E5%88%AB/index.html">
 <meta property="og:site_name" content="TianYBlue&#39;s Tiny Blog">
-<meta property="og:description" content="MongoDB 配置方法可从网上查找 MongoDB安装 安装2 C++ Driver MongoCXXMongoDB 的C++驱动可使用 MongoCXX MongoCXX 编译MongoCXX 需要自己编译，且依赖于boost库，因此需要提前编译boost  boost的编译方法很简单，只需从boost官网下载最新版压缩包解压，先执行bootstrap.bat，生成并运行b2.exe即可自动编">
+<meta property="og:description" content="四种类型转换 castC中使用类型转换一般直接进行强制转换，如： 12&#x2F;&#x2F; void* -&gt; data*data* m_data &#x3D; (data*)malloc(sizeof(data)); 这种强制转换并不会进行任何安全检查。 C++中引入了四种类型转换方法，以进行相关检查，分别是  static_cast dynamic_cast reinterpret_cast const_cast">
 <meta property="og:locale">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2023-10-20T12:16:45.132Z">
-<meta property="article:modified_time" content="2023-10-20T12:57:33.734Z">
+<meta property="article:published_time" content="2023-10-22T12:00:16.099Z">
+<meta property="article:modified_time" content="2023-10-22T10:51:07.550Z">
 <meta property="article:author" content="TianYBlue">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2490,7 +2490,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/20/mongodb配置及使用/">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/22/C++ 四种cast的区别/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="TianYBlue's Tiny Blog">
   </span>
@@ -2511,7 +2511,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        MongoDB 配置与 C++ Driver使用
+        C++ 四种cast的区别
       </h1>
       <div class='new-meta-box'>
         
@@ -2532,10 +2532,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-10-20T20:16:45+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2023-10-22T20:00:16+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Oct 20, 2023</p>
+    <p>发布于：Oct 22, 2023</p>
   </a>
 </div>
 
@@ -2558,78 +2558,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="MongoDB-配置方法"><a href="#MongoDB-配置方法" class="headerlink" title="MongoDB 配置方法"></a>MongoDB 配置方法</h2><p>可从网上查找</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_52855464/article/details/129227091">MongoDB安装</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42039228/article/details/123657641">安装2</a></p>
-<h2 id="C-Driver-MongoCXX"><a href="#C-Driver-MongoCXX" class="headerlink" title="C++ Driver MongoCXX"></a>C++ Driver MongoCXX</h2><p>MongoDB 的C++驱动可使用 MongoCXX</p>
-<h3 id="MongoCXX-编译"><a href="#MongoCXX-编译" class="headerlink" title="MongoCXX 编译"></a>MongoCXX 编译</h3><p>MongoCXX 需要自己编译，且<strong>依赖于boost库</strong>，因此需要提前编译boost</p>
-<blockquote>
-<p>boost的编译方法很简单，只需从<a target="_blank" rel="noopener" href="https://boostorg.jfrog.io/artifactory/main/release/">boost官网</a>下载最新版压缩包解压，先执行bootstrap.bat，生成并运行b2.exe即可自动编译。编译结果应该包含动态库和静态库，可自行使用。</p>
-</blockquote>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_23604781/article/details/129041627">MongoCXX 编译以及QT连接</a></p>
-<h3 id="MongoCXX-使用方法"><a href="#MongoCXX-使用方法" class="headerlink" title="MongoCXX 使用方法"></a>MongoCXX 使用方法</h3><h4 id="MongoCXX介绍"><a href="#MongoCXX介绍" class="headerlink" title="MongoCXX介绍"></a>MongoCXX介绍</h4><p>MongoCXX主要使用两个namespace，mongocxx和bsoncxx。</p>
+    <h1 id="四种类型转换-cast"><a href="#四种类型转换-cast" class="headerlink" title="四种类型转换 cast"></a>四种类型转换 cast</h1><p>C中使用类型转换一般直接进行强制转换，如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// void* -&gt; data*</span></span><br><span class="line">data* m_data = (data*)<span class="built_in">malloc</span>(<span class="built_in">sizeof</span>(data));</span><br></pre></td></tr></table></figure>
+<p>这种强制转换并不会进行任何安全检查。</p>
+<p>C++中引入了四种类型转换方法，以进行相关检查，分别是</p>
 <ul>
-<li>mongocxx 管理有关数据库相关程序。如数据库的连接、增删改查等。</li>
-<li>bsoncxx 管理MongoDB文档相关程序。数据库的插入、查询等都需要以文档为基础。</li>
+<li>static_cast</li>
+<li>dynamic_cast</li>
+<li>reinterpret_cast</li>
+<li>const_cast</li>
 </ul>
-<p>MongCXX 需要C++17标准</p>
-<h4 id="连接MongoDB数据库"><a href="#连接MongoDB数据库" class="headerlink" title="连接MongoDB数据库"></a>连接MongoDB数据库</h4><ol>
-<li>创建连接</li>
-</ol>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">connectToHost</span><span class="params">(QString m_hostName, QString m_port)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(m_hostName==<span class="string">&quot;&quot;</span> || m_port==<span class="string">&quot;&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    mongocxx::instance* m_dbInstance = <span class="literal">nullptr</span>;</span><br><span class="line">    mongocxx::client* m_client = <span class="literal">nullptr</span>;</span><br><span class="line"></span><br><span class="line">    mongocxx::uri uri&#123; <span class="built_in">QString</span>(<span class="string">&quot;mongodb://%1:%2&quot;</span>).<span class="built_in">arg</span>(m_hostName).<span class="built_in">arg</span>(m_port).<span class="built_in">toLatin1</span>().<span class="built_in">data</span>()&#125;;</span><br><span class="line">    m_dbInstance = <span class="built_in">new</span>(std::nothrow) mongocxx::<span class="built_in">instance</span>();</span><br><span class="line">    m_client = <span class="built_in">new</span>(std::nothrow) mongocxx::<span class="built_in">client</span>(uri);</span><br><span class="line">    <span class="built_in">qDebug</span>() &lt;&lt; <span class="string">&quot;连接成功!&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h2 id="static-cast"><a href="#static-cast" class="headerlink" title="static_cast"></a>static_cast</h2><p>static_cast 在编译期间提供类型转换检查，可以对内置类型以及有联系的类型间进行转换。</p>
+<p>static_cast 在向上转换(Derived* –&gt; Base*)时，是安全的；也可向下转换，但并非时安全的。</p>
+<p>static_cast 不能转换限定符如const、voliate等属性。</p>
+<h2 id="dynamic-cast"><a href="#dynamic-cast" class="headerlink" title="dynamic_cast"></a>dynamic_cast</h2><p>相较于static_cast，dynamic_cast在进行向下类型转换时提供运行时类型检查，通过返回空指针或<br>抛出异常保证转换的安全性。</p>
+<p>但dynamic_cast会导致额外的性能消耗，应尽量使用static_cast并在向下转型时实现安全检查。</p>
+<h2 id="reinterpret-cast"><a href="#reinterpret-cast" class="headerlink" title="reinterpret_cast"></a>reinterpret_cast</h2><p>通过对底层字节数据进行重新解释来进行类型转换，它只是一种对于类型的重新解释。</p>
 <blockquote>
-<p>注意，程序运行期间<strong>只可拥有一个 instance</strong>，不可再次new mongocxx::instance()。</p>
+<p>例如 int* –&gt; char* 只是让编译器将它作为一个char*看待，print时只输出一个字节的数值。</p>
 </blockquote>
-<ol>
-<li>使用具体的数据库和集合：</li>
-</ol>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mongocxx::database db = m_client-&gt;<span class="built_in">database</span>(dbName.<span class="built_in">c_str</span>());</span><br><span class="line">mongocxx::collection collection = db[collName.<span class="built_in">c_str</span>()];</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>MongoCXX有关字符串的部分，最好使用C-Style字符串，即<code>std::string().c_str()</code>。</p>
-<p>并且MongoCXX <strong>只接受UTF-8编码</strong>的字符串，否则会出现 <em>Invalid Bson UTF-8 string</em>的问题。</p>
-</blockquote>
-<h4 id="BSON文档构建"><a href="#BSON文档构建" class="headerlink" title="BSON文档构建"></a>BSON文档构建</h4><p>Mongocxx的各类操作要使用文档作为条件。<br>构建文档的方法主要由两种：<code>bsoncxx::builder::stream</code> 和 <code>bsoncxx::builder::basic</code>.</p>
-<p>官方推荐使用basic方法构建文档，更加简单直观。<br><a target="_blank" rel="noopener" href="https://mongocxx.org/mongocxx-v3/tutorial/">官方示例教程</a></p>
-<p>basic构建文档的方法：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">构建如下文档</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">   &quot;name&quot; : &quot;MongoDB&quot;,</span></span><br><span class="line"><span class="comment">   &quot;type&quot; : &quot;database&quot;,</span></span><br><span class="line"><span class="comment">   &quot;count&quot; : 1,</span></span><br><span class="line"><span class="comment">   &quot;versions&quot;: [ &quot;v6.0&quot;, &quot;v5.0&quot;, &quot;v4.4&quot;, &quot;v4.2&quot;, &quot;v4.0&quot;, &quot;v3.6&quot; ],</span></span><br><span class="line"><span class="comment">   &quot;info&quot; : &#123;</span></span><br><span class="line"><span class="comment">               &quot;x&quot; : 203,</span></span><br><span class="line"><span class="comment">               &quot;y&quot; : 102</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> doc_value = <span class="built_in">make_document</span>(</span><br><span class="line">    <span class="built_in">kvp</span>(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;MongoDB&quot;</span>),</span><br><span class="line">    <span class="built_in">kvp</span>(<span class="string">&quot;type&quot;</span>, <span class="string">&quot;database&quot;</span>),</span><br><span class="line">    <span class="built_in">kvp</span>(<span class="string">&quot;count&quot;</span>, <span class="number">1</span>),</span><br><span class="line">    <span class="built_in">kvp</span>(<span class="string">&quot;versions&quot;</span>, <span class="built_in">make_array</span>(<span class="string">&quot;v6.0&quot;</span>, <span class="string">&quot;v5.0&quot;</span>, <span class="string">&quot;v4.4&quot;</span>, <span class="string">&quot;v4.2&quot;</span>, <span class="string">&quot;v4.0&quot;</span>, <span class="string">&quot;v3.6&quot;</span>)),</span><br><span class="line">    <span class="built_in">kvp</span>(<span class="string">&quot;info&quot;</span>, <span class="built_in">make_document</span>(<span class="built_in">kvp</span>(<span class="string">&quot;x&quot;</span>, <span class="number">203</span>), <span class="built_in">kvp</span>(<span class="string">&quot;y&quot;</span>, <span class="number">102</span>))));</span><br></pre></td></tr></table></figure>
-
-<p>动态构建文档：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">&#123;</span></span><br><span class="line"><span class="comment">    filename: &quot;...&quot;,</span></span><br><span class="line"><span class="comment">    contains: [</span></span><br><span class="line"><span class="comment">        ...</span></span><br><span class="line"><span class="comment">    ],</span></span><br><span class="line"><span class="comment">    sub_doc: &#123;</span></span><br><span class="line"><span class="comment">        ...</span></span><br><span class="line"><span class="comment">    &#125;</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">    <span class="keyword">auto</span> doc = bsoncxx::builder::basic::document&#123;&#125;;</span><br><span class="line">    <span class="keyword">auto</span> arr = bsoncxx::builder::basic::array&#123;&#125;;</span><br><span class="line"></span><br><span class="line">    doc.<span class="built_in">append</span>(<span class="built_in">kvp</span>(<span class="string">&quot;filename&quot;</span>, filename.<span class="built_in">c_str</span>()));</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span>&amp; f : releatedFiles) &#123;</span><br><span class="line">        arr.<span class="built_in">append</span>(name.<span class="built_in">c_str</span>());</span><br><span class="line">    &#125;</span><br><span class="line">    doc.<span class="built_in">append</span>(<span class="built_in">kvp</span>(<span class="string">&quot;contains&quot;</span>, arr));</span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> sub_doc = bsoncxx::builder::basic::document&#123;&#125;;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        构建sub_doc，与doc同理</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   doc.<span class="built_in">append</span>(<span class="built_in">kvp</span>(<span class="string">&quot;sub_doc&quot;</span>, sub_doc));</span><br></pre></td></tr></table></figure>
-
-<h4 id="查询操作"><a href="#查询操作" class="headerlink" title="查询操作"></a>查询操作</h4><ol>
-<li>查询单个，使用<strong>find_one</strong></li>
-</ol>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> fileMeta = collection.<span class="built_in">find_one</span>(<span class="built_in">make_document</span>(<span class="built_in">kvp</span>(<span class="string">&quot;filename&quot;</span>, filename.<span class="built_in">c_str</span>())));</span><br><span class="line"><span class="comment">// 判断是否找到</span></span><br><span class="line"><span class="keyword">if</span>(fileMeta)&#123;</span><br><span class="line">    <span class="keyword">auto</span> ele1 = (*fileMeta).<span class="built_in">find</span>(<span class="string">&quot;contains&quot;</span>);</span><br><span class="line">    <span class="keyword">auto</span> contains = ele1-&gt;<span class="built_in">get_array</span>().value;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用 std::distance获得array大小</span></span><br><span class="line">    <span class="type">size_t</span> size = std::<span class="built_in">distance</span>(names.<span class="built_in">begin</span>(), names.<span class="built_in">end</span>());</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">        <span class="keyword">auto</span> val = contains[i].<span class="built_in">get_string</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>查询多个，使用<strong>find</strong></li>
-</ol>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> cursor_all = collection.<span class="built_in">find</span>(&#123;&#125;);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">auto</span> doc : cursor_all) &#123;</span><br><span class="line">    <span class="comment">// Do something with doc</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="插入操作"><a href="#插入操作" class="headerlink" title="插入操作"></a>插入操作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">auto</span> result = collection.<span class="built_in">insert_one</span>(doc_view_or_doc_val);</span><br></pre></td></tr></table></figure>
-
-<h4 id="更新操作"><a href="#更新操作" class="headerlink" title="更新操作"></a>更新操作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 官网示例</span></span><br><span class="line"><span class="keyword">auto</span> update_one_result = collection.<span class="built_in">update_one</span>(<span class="built_in">make_document</span>(<span class="built_in">kvp</span>(<span class="string">&quot;i&quot;</span>, <span class="number">0</span>)),</span><br><span class="line">                                <span class="built_in">make_document</span>(<span class="built_in">kvp</span>(<span class="string">&quot;$set&quot;</span>, <span class="built_in">make_document</span>(<span class="built_in">kvp</span>(<span class="string">&quot;foo&quot;</span>, <span class="string">&quot;bar&quot;</span>)))));</span><br></pre></td></tr></table></figure>
-
-<h4 id="删除操作"><a href="#删除操作" class="headerlink" title="删除操作"></a>删除操作</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 官网示例</span></span><br><span class="line"><span class="keyword">auto</span> delete_one_result = collection.<span class="built_in">delete_one</span>(<span class="built_in">make_document</span>(<span class="built_in">kvp</span>(<span class="string">&quot;i&quot;</span>, <span class="number">0</span>)));</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用MongoDB-GridFS"><a href="#使用MongoDB-GridFS" class="headerlink" title="使用MongoDB GridFS"></a>使用MongoDB GridFS</h3><p>MongoDB中，集合内的单个文档大小不超过16M，所以储存大文件最好使用GridFS。</p>
-<p>GridFS下，文件将被存在一个bucket中。在MongoDB中显示为fs.files和fs.chunks两个集合。fs.files集合存储每个文件的元数据，如文件名；fs.chunks分块存储文件数据。</p>
-<h4 id="gridfs-上传文件"><a href="#gridfs-上传文件" class="headerlink" title="gridfs 上传文件"></a>gridfs 上传文件</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">mongocxx::database db = m_client-&gt;<span class="built_in">database</span>(dbName.<span class="built_in">c_str</span>());</span><br><span class="line">mongocxx::collection collection = db[collName.<span class="built_in">c_str</span>()];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获得文件名</span></span><br><span class="line"><span class="function">QFileInfo <span class="title">fileInfo</span><span class="params">(filePath)</span></span>;</span><br><span class="line">QString fileName = fileInfo.<span class="built_in">fileName</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取指定数据库的bucket</span></span><br><span class="line">mongocxx::gridfs::bucket bucket = db.<span class="built_in">gridfs_bucket</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// MongoDB 只接受UTF-8的字符串</span></span><br><span class="line">std::string name = std::<span class="built_in">string</span>(fileName.<span class="built_in">toUtf8</span>());</span><br><span class="line"><span class="type">const</span> <span class="type">char</span>* fname = name.<span class="built_in">c_str</span>();</span><br><span class="line">mongocxx::gridfs::uploader up = bucket.<span class="built_in">open_upload_stream</span>(fname);</span><br><span class="line"></span><br><span class="line">std::ifstream fp;</span><br><span class="line"><span class="comment">// QString 含中文 转为 std::string</span></span><br><span class="line"><span class="function">std::string <span class="title">stdPath</span><span class="params">(filePath.toLocal8Bit())</span></span>;</span><br><span class="line">fp.<span class="built_in">open</span>(stdPath, std::ios::binary | std::ios::in);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 移动文件指针到末尾</span></span><br><span class="line">fp.<span class="built_in">seekg</span>(<span class="number">0</span>, fp.end);</span><br><span class="line"><span class="type">size_t</span> allLength = fp.<span class="built_in">tellg</span>();</span><br><span class="line"></span><br><span class="line">fp.<span class="built_in">seekg</span>(<span class="number">0</span>, fp.beg);</span><br><span class="line"></span><br><span class="line"><span class="type">char</span>* buff = <span class="keyword">new</span> <span class="type">char</span>[allLength + <span class="number">10</span>]&#123; <span class="number">0</span> &#125;;</span><br><span class="line">fp.<span class="built_in">read</span>(buff, allLength);</span><br><span class="line">fp.<span class="built_in">close</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将char*转为const unsigned char*</span></span><br><span class="line">up.<span class="built_in">write</span>(<span class="built_in">reinterpret_cast</span>&lt;<span class="type">const</span> <span class="type">unsigned</span> <span class="type">char</span>*&gt;(<span class="built_in">const_cast</span>&lt;constchar*&gt;(buff)), allLength);</span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> result = up.<span class="built_in">close</span>();</span><br><span class="line"><span class="keyword">delete</span>[] buff;</span><br><span class="line">buff = <span class="literal">nullptr</span>;</span><br></pre></td></tr></table></figure>
-
-<h4 id="gridfs下载文件"><a href="#gridfs下载文件" class="headerlink" title="gridfs下载文件"></a>gridfs下载文件</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">mongocxx::gridfs::bucket bucket = db.<span class="built_in">gridfs_bucket</span>();</span><br><span class="line">mongocxx::collection fsColl = db[<span class="string">&quot;fs.files&quot;</span>];</span><br><span class="line"><span class="keyword">auto</span> fileMeta = fsColl.<span class="built_in">find_on</span>(bsoncxx::builder::stream::document&#123;&#125;&lt;&lt;<span class="string">&quot;filename&quot;</span>&lt;&lt;std::<span class="built_in">strin</span>(fileName.<span class="built_in">toUtf8</span>()).<span class="built_in">c_str</span>()&lt;&lt;bsoncxx::builder::stream::finalize);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断文件是否存在</span></span><br><span class="line"><span class="keyword">if</span>(fileMeta)&#123;</span><br><span class="line">    <span class="comment">// 获得目标文件的ID</span></span><br><span class="line">    <span class="keyword">auto</span> idEle = (*fileMeta).<span class="built_in">find</span>(<span class="string">&quot;_id&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> downloader = bucket.<span class="built_in">open_download_stream</span>(idEle-&gt;<span class="built_in">get_value</span>());</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> file_length = downloader.<span class="built_in">file_length</span>();</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> bytes_counter = <span class="number">0</span>;</span><br><span class="line">    <span class="type">long</span> <span class="type">long</span> buffer_size = std::<span class="built_in">min</span>(file_length, <span class="built_in">static_cast</span>&lt;<span class="type">long</span> <span class="type">long</span>&gt;(downloader.<span class="built_in">chunk_size</span>()));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// make_uniques&lt;any[]&gt;(size) 当类型为数组类型时，size指的是数组的大小</span></span><br><span class="line">    std::unique_ptr&lt;std::<span class="type">uint8_t</span>[]&gt; buffer = std::<span class="built_in">make_unique</span>&lt;std::<span class="type">uint8_t</span>[]&gt;(<span class="built_in">static_cast</span>&lt;std::<span class="type">size_t</span>&gt;(buffer_size));</span><br><span class="line"></span><br><span class="line">    std::fstream fq;</span><br><span class="line">    QString workPath = QDir::<span class="built_in">currentPath</span>();</span><br><span class="line">    <span class="comment">// directory == &quot;*/&quot;</span></span><br><span class="line">    QString path = directory + fileName;</span><br><span class="line"></span><br><span class="line">    fq.<span class="built_in">open</span>(std::<span class="built_in">string</span>(path.<span class="built_in">toLocal8Bit</span>()), std::ios::binary | std::ios::out);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(<span class="keyword">auto</span> length_read = downloader.<span class="built_in">read</span>(buffer.<span class="built_in">get</span>(), <span class="built_in">static_cast</span>&lt;std::<span class="type">size_t</span>&gt;(buffer_size)))</span><br><span class="line">    &#123;</span><br><span class="line">        bytes_counter += <span class="built_in">static_cast</span>&lt;std::<span class="type">int32_t</span>&gt;(length_read);</span><br><span class="line">        fq.<span class="built_in">write</span>(<span class="built_in">reinterpret_cast</span>&lt;<span class="type">char</span>*&gt;(<span class="built_in">const_cast</span>&lt;<span class="type">uint8_t</span>*&gt;(buffer.<span class="built_in">get</span>())), length_read);</span><br><span class="line">    &#125;</span><br><span class="line">    fq.<span class="built_in">close</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>MongoCXX有几个需要注意的地方：</p>
-<ul>
-<li>最好使用C风格字符串</li>
-<li>string一定要采用UTF-8编码</li>
-</ul>
-<h2 id="QT环境下QString的相关问题"><a href="#QT环境下QString的相关问题" class="headerlink" title="QT环境下QString的相关问题"></a>QT环境下QString的相关问题</h2><p>QString转为std::string请使用：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 转为本地默认编码</span></span><br><span class="line">std::string stdstr = std::<span class="built_in">string</span>(qstr.<span class="built_in">toLocal8Bit</span>());</span><br></pre></td></tr></table></figure>
-
-<p>QString转为UTF-8编码的std::string:</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">std::string utf8str = std::<span class="built_in">string</span>(qstr.<span class="built_in">toUtf8</span>());</span><br></pre></td></tr></table></figure>
+<h2 id="const-cast"><a href="#const-cast" class="headerlink" title="const_cast"></a>const_cast</h2><p>用来获得(或去掉)const限定符。</p>
+<p>将const限定符去掉后，对原数据的修改是未定义的(UB)。</p>
 
   </div>
   
@@ -2654,10 +2603,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-20T20:57:33+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2023-10-22T18:51:07+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Oct 20, 2023</p>
+    <p>更新于：Oct 22, 2023</p>
   </a>
 </div>
 
@@ -2676,7 +2625,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/10/20/mongodb%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/&title=MongoDB 配置与 C++ Driver使用 - TianYBlue's Tiny Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2023/10/22/C++%20%E5%9B%9B%E7%A7%8Dcast%E7%9A%84%E5%8C%BA%E5%88%AB/&title=C++ 四种cast的区别 - TianYBlue's Tiny Blog&summary="
           
           >
           
@@ -2688,7 +2637,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/10/20/mongodb%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/&title=MongoDB 配置与 C++ Driver使用 - TianYBlue's Tiny Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2023/10/22/C++%20%E5%9B%9B%E7%A7%8Dcast%E7%9A%84%E5%8C%BA%E5%88%AB/&title=C++ 四种cast的区别 - TianYBlue's Tiny Blog&summary="
           
           >
           
@@ -2700,7 +2649,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/10/20/mongodb%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/&title=MongoDB 配置与 C++ Driver使用 - TianYBlue's Tiny Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2023/10/22/C++%20%E5%9B%9B%E7%A7%8Dcast%E7%9A%84%E5%8C%BA%E5%88%AB/&title=C++ 四种cast的区别 - TianYBlue's Tiny Blog&summary="
           
           >
           
@@ -2733,21 +2682,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2023/10/20/C++%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81%E4%B8%AD%E7%9A%84%E5%87%BD%E6%95%B0%E8%99%9A%E8%A1%A8/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>C++ 继承</p>
-          <p class='content'>
-参考 链接
-
-
-子类构造时会自动调用基类的构造函数
-
-1234567891011121314151617class Base&#123;public:    Base(string name)...</p>
-        </a>
       
-      
-        <a class='next' href='/2023/10/20/hello-world/'>
-          <p class='title'>Hello World<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
+        <a class='next' href='/2023/10/20/%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E6%80%A7%E8%83%BD/'>
+          <p class='title'>CPU 缓存、Cache Miss与伪共享<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>CPU CacheCPU有L1、L2等多级缓存，相较于CPU的运算速度来说，内存过于缓慢。因此，一些数据会被提前加载进CPU Cache里，以提高运算速度。
+Cache Line缓存加载数据是以...</p>
         </a>
       
     </div>
@@ -2763,7 +2702,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/10/20/mongodb%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2023/10/22/C++%20%E5%9B%9B%E7%A7%8Dcast%E7%9A%84%E5%8C%BA%E5%88%AB/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2805,7 +2744,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#MongoDB-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95"><span class="toc-text">MongoDB 配置方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#C-Driver-MongoCXX"><span class="toc-text">C++ Driver MongoCXX</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MongoCXX-%E7%BC%96%E8%AF%91"><span class="toc-text">MongoCXX 编译</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MongoCXX-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">MongoCXX 使用方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MongoCXX%E4%BB%8B%E7%BB%8D"><span class="toc-text">MongoCXX介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5MongoDB%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-text">连接MongoDB数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#BSON%E6%96%87%E6%A1%A3%E6%9E%84%E5%BB%BA"><span class="toc-text">BSON文档构建</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C"><span class="toc-text">查询操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%92%E5%85%A5%E6%93%8D%E4%BD%9C"><span class="toc-text">插入操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E6%93%8D%E4%BD%9C"><span class="toc-text">更新操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C"><span class="toc-text">删除操作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8MongoDB-GridFS"><span class="toc-text">使用MongoDB GridFS</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#gridfs-%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6"><span class="toc-text">gridfs 上传文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#gridfs%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6"><span class="toc-text">gridfs下载文件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">注意事项</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#QT%E7%8E%AF%E5%A2%83%E4%B8%8BQString%E7%9A%84%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98"><span class="toc-text">QT环境下QString的相关问题</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#static-cast"><span class="toc-text">static_cast</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dynamic-cast"><span class="toc-text">dynamic_cast</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reinterpret-cast"><span class="toc-text">reinterpret_cast</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#const-cast"><span class="toc-text">const_cast</span></a></li></ol>
     </div>
   </section>
 
@@ -3517,7 +3456,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TianYBlue's Tiny Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TianYBlue","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TianYBlue's Tiny Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/10/20/mongodb配置及使用/","name":"MongoDB 配置与 C++ Driver使用"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TianYBlue's Tiny Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"TianYBlue","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"TianYBlue's Tiny Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"MongoDB 配置与 C++ Driver使用","description":"","inLanguage":"zh-Hans","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/10/20/mongodb%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/"},"author":{"@type":"Person","name":"TianYBlue","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TianYBlue's Tiny Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/10/20/mongodb%E9%85%8D%E7%BD%AE%E5%8F%8A%E4%BD%BF%E7%94%A8/","wordCount":0,"datePublished":"2023-10-20T12:16:45.132Z","dateModified":"2023-10-20T12:57:33.734Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"TianYBlue's Tiny Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"TianYBlue","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":""},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"TianYBlue's Tiny Blog"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2023/10/22/C++ 四种cast的区别/","name":"C++ 四种cast的区别"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"TianYBlue's Tiny Blog","url":"http://example.com/","keywords":null,"description":"","author":{"@type":"Person","name":"TianYBlue","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":""},"publisher":{"@type":"Organization","name":"TianYBlue's Tiny Blog","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"C++ 四种cast的区别","description":"","inLanguage":"zh-Hans","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2023/10/22/C++%20%E5%9B%9B%E7%A7%8Dcast%E7%9A%84%E5%8C%BA%E5%88%AB/"},"author":{"@type":"Person","name":"TianYBlue","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"TianYBlue's Tiny Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2023/10/22/C++%20%E5%9B%9B%E7%A7%8Dcast%E7%9A%84%E5%8C%BA%E5%88%AB/","wordCount":0,"datePublished":"2023-10-22T12:00:16.099Z","dateModified":"2023-10-22T10:51:07.550Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
